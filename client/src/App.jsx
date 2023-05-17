@@ -2,8 +2,10 @@ import { GlobalStyle } from "./components/style/GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import ThemeContext from "./context";
 import { useState } from "react";
-import ContactForm from "./components/ContactForm";
+import ContactFormPage from "./pages/ContactForm";
 import { Toaster } from "react-hot-toast";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import DataPage from "./pages/Data";
 
 function App() {
   const [darkTheme, setDarkTheme] = useState(false);
@@ -24,7 +26,12 @@ function App() {
       <ThemeContext.Provider value={{ darkTheme, setDarkTheme }}>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          <ContactForm />
+          <Router>
+            <Routes>
+              <Route path="/" element={<ContactFormPage />} />
+              <Route path="/data" element={<DataPage />} />
+            </Routes>
+          </Router>
           <Toaster />
         </ThemeProvider>
       </ThemeContext.Provider>

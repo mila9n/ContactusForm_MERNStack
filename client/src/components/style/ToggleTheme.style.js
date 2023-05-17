@@ -20,7 +20,7 @@ export const ToggleStyle = styled.div`
   }
 
   .sun {
-    color: orange;
+    color: orangered;
   }
 
   .moon {
@@ -28,11 +28,11 @@ export const ToggleStyle = styled.div`
   }
 
   .moon_dark {
-    top: -64px;
+    top: -65px;
   }
 
   .sun_light {
-    bottom: -64px;
+    bottom: -65px;
   }
 
   @media (max-width: 400px) {

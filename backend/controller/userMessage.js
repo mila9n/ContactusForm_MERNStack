@@ -30,3 +30,19 @@ export const getAllUserMessage = async (req, res, next) => {
     next(error);
   }
 };
+
+export const deleteMessage = async (req, res, next) => {
+  try {
+    const { messageId } = req.params;
+
+    const isExist = await UserMessage.findById(messageId);
+    if (!isExist) return next(new ErrorHandler("Message does not exist", 400));
+    await isExist.deleteOne();
+    req.status(200).json({
+      success: true,
+      message: "Task deleted successfully",
+    });
+  } catch (error) {
+    next(error);
+  }
+};

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContactFormStyle = styled.div`
   width: 60%;
   max-width: 600px;
-  margin: 40px auto 100px;
+  margin: 40px auto 20px;
   padding: 15px 15px 15px;
   background-color: ${(props) => props.theme.formBg};
   box-shadow: 0px 0px 8px ${(props) => props.theme.formShadow};
@@ -44,5 +44,39 @@ export const ContactFormStyle = styled.div`
     & > div > h2 {
       font-size: 28px;
     }
+  }
+`;
+
+export const ButtonStyle = styled.button`
+  padding: 6px 30px;
+  display: block;
+  margin: 5px auto 40px;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+  background-color: ${(props) => props.theme.buttonBg};
+  color: ${(props) => props.theme.buttonTxtColor};
+  transition: all 300ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+`;
+
+export const ButtonStyle2 = styled.button`
+  padding: 6px 30px;
+  display: block;
+  margin: 20px 25px 20px;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+  background-color: ${(props) => props.theme.buttonBg};
+  color: ${(props) => props.theme.buttonTxtColor};
+  transition: all 300ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
   }
 `;

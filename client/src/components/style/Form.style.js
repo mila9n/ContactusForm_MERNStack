@@ -35,7 +35,7 @@ export const FormStyle = styled.div`
     padding: 5px 30px;
     cursor: pointer;
     background-color: #fff;
-    border: 1px solid gray;
+    border: none;
     font-weight: 500;
     background-color: ${(props) => props.theme.buttonBg};
     color: ${(props) => props.theme.buttonTxtColor};

@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { FormStyle } from "./style/Form.style";
-const baseUrl = "http://localhost:5000";
+const baseUrl = "https://contact-us-form.onrender.com";
 
 const Form = () => {
   const [loading, setLoading] = useState(false);
