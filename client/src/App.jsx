@@ -19,6 +19,8 @@ function App() {
     buttonBg: darkTheme ? "#00ADB5" : "#1E2022",
     buttonTxtColor: !darkTheme ? "#EEEEEE" : "#1E2022",
     formHeading: darkTheme ? "#00ADB5" : "#1E2022",
+    skeletonCardBack: darkTheme ? "#393E46" : "#dddbdd",
+    skeletonCardAnimation: darkTheme ? "0, 173, 181" : "255,255,255",
   };
 
   return (
